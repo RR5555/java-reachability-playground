@@ -1,9 +1,9 @@
 name: Build code, run unit test, run SAST, SCA, DAST security scans
 
 concurrency:
-  # group: single-group
-  group: $-$
-  # cancel-in-progress: true 
+  group: test${{ github.workflow_sha }}
+  # group: $-$
+  # cancel-in-progress: true
 
 on: push
 
